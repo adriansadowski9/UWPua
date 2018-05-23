@@ -1,0 +1,9 @@
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\bin\Debug\netstandard2.0\UWP_UAapp.deps.json
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\bin\Debug\netstandard2.0\UWP_UAapp.dll
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\bin\Debug\netstandard2.0\UWP_UAapp.pdb
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\obj\Debug\netstandard2.0\UWP_UAapp.csprojAssemblyReference.cache
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\obj\Debug\netstandard2.0\UWP_UAapp.csproj.CoreCompileInputs.cache
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\obj\Debug\netstandard2.0\UWP_UAapp.AssemblyInfoInputs.cache
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\obj\Debug\netstandard2.0\UWP_UAapp.AssemblyInfo.cs
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\obj\Debug\netstandard2.0\UWP_UAapp.dll
+c:\users\adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp\obj\Debug\netstandard2.0\UWP_UAapp.pdb
