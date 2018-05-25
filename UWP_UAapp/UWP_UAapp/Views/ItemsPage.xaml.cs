@@ -8,8 +8,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using UWP_UAapp.Models;
-using UWP_UAapp.Views;
 using UWP_UAapp.ViewModels;
+
 
 namespace UWP_UAapp.Views
 {
@@ -17,6 +17,7 @@ namespace UWP_UAapp.Views
 	public partial class ItemsPage : ContentPage
 	{
         ItemsViewModel viewModel;
+        double lat, lng;
 
         public ItemsPage()
         {
@@ -48,6 +49,12 @@ namespace UWP_UAapp.Views
 
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
+        }
+        void OpenGmaps(object sender, EventArgs args)
+        {
+            var button = (Button)sender;
+            var GmapsLink = button.Text;
+            Device.OpenUri(new Uri(GmapsLink));
         }
     }
 }

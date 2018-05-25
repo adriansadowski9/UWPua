@@ -7033,11 +7033,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.UWP\\UWP_UAapp.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.UWP\\UWP_UAapp.UWP.csproj",
       "projectName": "UWP_UAapp.UWP",
-      "projectPath": "c:\\users\\adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.UWP\\UWP_UAapp.UWP.csproj",
+      "projectPath": "C:\\Users\\Adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.UWP\\UWP_UAapp.UWP.csproj",
       "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.UWP\\obj\\",
+      "outputPath": "C:\\Users\\Adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -7057,8 +7057,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "c:\\users\\adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.csproj": {
-              "projectPath": "c:\\users\\adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.csproj"
+            "C:\\Users\\Adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.csproj": {
+              "projectPath": "C:\\Users\\Adrian\\source\\repos\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp\\UWP_UAapp.csproj"
             }
           }
         }

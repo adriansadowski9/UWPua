@@ -22,6 +22,7 @@ namespace UWP_UAapp.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
+
     }
 }
 

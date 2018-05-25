@@ -2,17 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UWP_UAapp.Views.ItemDetailPage"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             BackgroundColor="{DynamicResource backgroundColor}">
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Name:" FontSize="Medium" />
-        <Label Text="{Binding Item.Name}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Item.Description}" FontSize="Small"/>
-        <Label Text="Street:" FontSize="Medium" />
-        <Label Text="{Binding Item.Street}" FontSize="Small"/>
-        <Label Text="Zip code:" FontSize="Medium" />
-        <Label Text="{Binding Item.Zip_Code}" FontSize="Small"/>
-        <Label Text="City:" FontSize="Medium" />
-        <Label Text="{Binding Item.City}" FontSize="Small"/>
+        <Label Text="Name:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.Name}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
+        <Label Text="Description:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.Description}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
+        <Label Text="Street:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.Street}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
+        <Label Text="Zip code:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.Zip_Code}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
+        <Label Text="City:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.City}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
     </StackLayout>
 </ContentPage>

@@ -1,0 +1,1 @@
+C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.UWP\UWP_UAapp.UWP.csproj;x86

@@ -29,6 +29,8 @@ namespace UWP_UAapp.ViewModels
             });
         }
 
+
+
         async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)

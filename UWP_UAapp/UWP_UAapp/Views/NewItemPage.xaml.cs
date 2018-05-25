@@ -19,12 +19,12 @@ namespace UWP_UAapp.Views
 
             Item = new Item
             {
-                Name = "New place",
-                Description = "This is an place description.",
-                Street = "Street name and number",
-                Zip_Code = "Zip Code",
-                City = "City",
-                GMaps_Link = "Link to place on GMaps"
+                Name = "",
+                Description = "",
+                Street = "",
+                Zip_Code = "",
+                City = "",
+                GMaps_Link = ""
             };
 
             BindingContext = this;

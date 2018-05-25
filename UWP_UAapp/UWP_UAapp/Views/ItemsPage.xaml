@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UWP_UAapp.Views.ItemsPage"
-              Title="{Binding Title}"
-             x:Name="BrowseItemsPage">
+             x:Name="BrowseItemsPage"
+             Title="{Binding Title}"
+             BackgroundColor="{DynamicResource backgroundColor}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
             <ToolbarItem.Icon>
@@ -29,25 +30,28 @@
                         <ViewCell>
                             <StackLayout Padding="10">
                                 <Label Text="{Binding Name}" 
-                       LineBreakMode="NoWrap" 
+                       LineBreakMode="NoWrap" XAlign="Center"
                        Style="{DynamicResource ListItemTextStyle}" 
-                       FontSize="16" />
+                       FontSize="16" TextColor="{DynamicResource textColor}"/>
                                 <Label Text="{Binding Description}" 
-                       LineBreakMode="NoWrap"
+                       LineBreakMode="NoWrap" XAlign="Center"
                        Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
+                       FontSize="13" TextColor="{DynamicResource textColor}"/>
                                 <Label Text="{Binding Street}" 
-                       LineBreakMode="NoWrap"
+                       LineBreakMode="NoWrap" XAlign="Center"           
                        Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
-                                <Label Text="{Binding Zip_Code}" 
+                       FontSize="13" TextColor="{DynamicResource textColor}"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="{Binding Zip_Code}" 
                        LineBreakMode="NoWrap"
-                       Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
-                                <Label Text="{Binding City}" 
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                       FontSize="13" TextColor="{DynamicResource textColor}"/>
+                                    <Label Text="{Binding City}" 
                        LineBreakMode="NoWrap"
-                       Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                       FontSize="13" TextColor="{DynamicResource textColor}"/>
+                                </StackLayout>
+                                <Button Text="{Binding GMaps_Link}" BorderWidth="1" Clicked="OpenGmaps"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

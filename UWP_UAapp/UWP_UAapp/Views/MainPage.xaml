@@ -2,7 +2,9 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:views="clr-namespace:UWP_UAapp.Views"
-            x:Class="UWP_UAapp.Views.MainPage">
+            x:Class="UWP_UAapp.Views.MainPage"
+            Title="{Binding Title}"
+            BackgroundColor="{DynamicResource backgroundColor}">
     <TabbedPage.Children>
         <NavigationPage Title="Browse">
             <NavigationPage.Icon>
