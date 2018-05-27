@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 using UWP_UAapp.Models;
 using UWP_UAapp.ViewModels;
-
+using System.Collections;
 
 namespace UWP_UAapp.Views
 {
@@ -17,12 +17,12 @@ namespace UWP_UAapp.Views
 	public partial class ItemsPage : ContentPage
 	{
         ItemsViewModel viewModel;
-        double lat, lng;
+        int i = 0;
+        private IEnumerable mockItems;
 
         public ItemsPage()
         {
             InitializeComponent();
-
             BindingContext = viewModel = new ItemsViewModel();
         }
 
@@ -50,11 +50,23 @@ namespace UWP_UAapp.Views
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
-        void OpenGmaps(object sender, EventArgs args)
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var button = (Button)sender;
-            var GmapsLink = button.Text;
-            Device.OpenUri(new Uri(GmapsLink));
+            if (i == 0)
+            {
+                mockItems = ItemsListView.ItemsSource;
+                i++;
+            }
+
+            if (string.IsNullOrEmpty(e.NewTextValue))
+            {
+                ItemsListView.ItemsSource = mockItems;
+            }
+
+            else
+            {
+                ItemsListView.ItemsSource = mockItems.Cast<Item>().Where(x => x.Name.StartsWith(e.NewTextValue));
+            }
         }
     }
 }

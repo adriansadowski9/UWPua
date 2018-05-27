@@ -4,17 +4,22 @@
              x:Class="UWP_UAapp.App">
 	<Application.Resources>
 		<ResourceDictionary>
-            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Primary">#239B56</Color>
             <Color x:Key="PrimaryDark">#1976D2</Color>
-            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="Accent">#82E0AA</Color>
             <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
             <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
             <Color x:Key="LightTextColor">#999999</Color>
             <Color x:Key="backgroundColor">#f5f5f5</Color>
-            <Color x:Key="textColor">#181818</Color>
+            <Color x:Key="textColor">#262626</Color>
+            <Color x:Key="textColorAbout">#D5F5E3</Color>
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#239B56</Color>
+            <Color x:Key="barBackgroundColor">#239B56</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource barBackgroundColor}"/>
+            </Style>
         </ResourceDictionary>
 	</Application.Resources>
 </Application>

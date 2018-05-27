@@ -108,6 +108,9 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "UWP_UAapp.Android.dll" comes first in this list. */
 		"UWP_UAapp.Android.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
+		"PCLStorage.Abstractions.dll",
+		"PCLStorage.dll",
 		"UWP_UAapp.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Annotations.dll",

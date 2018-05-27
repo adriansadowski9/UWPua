@@ -7,6 +7,10 @@ using Xamarin.Forms;
 
 using UWP_UAapp.Models;
 using UWP_UAapp.Views;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Input;
+using UWP_UAapp.Services;
 
 namespace UWP_UAapp.ViewModels
 {
@@ -17,7 +21,7 @@ namespace UWP_UAapp.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "Places";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -26,7 +30,26 @@ namespace UWP_UAapp.ViewModels
                 var _item = item as Item;
                 Items.Add(_item);
                 await DataStore.AddItemAsync(_item);
+                await ExecuteLoadItemsCommand();
             });
+            MessagingCenter.Subscribe<ItemDetailPage, Item>(this, "DeleteItem", async (obj, item) =>
+            {
+                var _item = item as Item;
+                Items.Add(_item);
+                await DataStore.DeleteItemAsync(_item.Id);
+                await ExecuteLoadItemsCommand();
+            });
+            MessagingCenter.Subscribe<EditItemPage, Item>(this, "EditItem", async (obj, item) =>
+            {
+                var _item = item as Item;
+                await DataStore.UpdateItemAsync(_item);
+                await ExecuteLoadItemsCommand();
+            });
+            MessagingCenter.Subscribe<MockDataStore>(this, "Refresh", async (obj) =>
+            {
+                await ExecuteLoadItemsCommand();
+            });
+
         }
 
 

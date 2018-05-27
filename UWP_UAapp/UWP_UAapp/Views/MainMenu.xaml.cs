@@ -24,9 +24,9 @@ namespace UWP_UAapp.Views
             // Build the Menu
             MainMenuItems = new List<MainMenuItem>()
         {
-            new MainMenuItem() { Title = "Items List", Icon = "menu_inbox.png", TargetType = typeof(ItemsPage) },
-            new MainMenuItem() { Title = "About Page", Icon = "menu_stock.png", TargetType = typeof(AboutPage) },
-            new MainMenuItem() { Title = "Settings", Icon = "menu_inbox.png", TargetType = typeof(Settings) }
+            new MainMenuItem() { Title = "Places", Icon = "places.png", TargetType = typeof(ItemsPage) },
+            new MainMenuItem() { Title = "About", Icon = "about.png", TargetType = typeof(AboutPage) },
+            new MainMenuItem() { Title = "Settings", Icon = "settings.png", TargetType = typeof(Settings) }
         };
 
             // Set the default page, this is the "home" page.
@@ -41,11 +41,11 @@ namespace UWP_UAapp.Views
             var item = e.SelectedItem as MainMenuItem;
             if (item != null)
             {
-                if (item.Title.Equals("Items List"))
+                if (item.Title.Equals("Places"))
                 {
                     Detail = new NavigationPage(new ItemsPage());
                 }
-                else if (item.Title.Equals("About Page"))
+                else if (item.Title.Equals("About"))
                 {
                     Detail = new NavigationPage(new AboutPage());
                 }

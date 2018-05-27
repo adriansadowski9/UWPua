@@ -293,3 +293,6 @@ C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.UWP\obj\x86\Debug\qua
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.UWP\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.UWP\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.UWP\bin\x86\Debug\PCLStorage.Abstractions.dll
+C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.UWP\bin\x86\Debug\PCLStorage.dll

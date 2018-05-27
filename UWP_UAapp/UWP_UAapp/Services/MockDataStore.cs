@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using PCLStorage;
 
 using UWP_UAapp.Models;
+using Xamarin.Forms;
 
 [assembly: Xamarin.Forms.Dependency(typeof(UWP_UAapp.Services.MockDataStore))]
 namespace UWP_UAapp.Services
@@ -14,27 +18,18 @@ namespace UWP_UAapp.Services
 
         public MockDataStore()
         {
-            items = new List<Item>();
-            var mockItems = new List<Item>
+            MessagingCenter.Subscribe<App, List<Item>>(this, "LoadItems", async (obj, item) =>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Uniwersytet Gdański", Description="UG.", Street = "Jana Bażyńskiego", Zip_Code = "80-309", City = "Gdańsk", GMaps_Link = "https://www.google.com/maps/place/University+of+Gda%C5%84sk/@54.3961355,18.5721315,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd752f76dddae7:0x4d4128c9a5066e47!8m2!3d54.3961355!4d18.5743203" },
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Uniwersytet Gdański2", Description="UG.", Street = "Jana Bażyńskiego", Zip_Code = "80-309", City = "Gdańsk", GMaps_Link = "https://www.google.com/maps/place/University+of+Gda%C5%84sk/@54.3961355,18.5721315,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd752f76dddae7:0x4d4128c9a5066e47!8m2!3d54.3961355!4d18.5743203" },
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Uniwersytet Gdański3", Description="UG.", Street = "Jana Bażyńskiego", Zip_Code = "80-309", City = "Gdańsk", GMaps_Link = "https://www.google.com/maps/place/University+of+Gda%C5%84sk/@54.3961355,18.5721315,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd752f76dddae7:0x4d4128c9a5066e47!8m2!3d54.3961355!4d18.5743203" },
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Uniwersytet Gdański4", Description="UG.", Street = "Jana Bażyńskiego", Zip_Code = "80-309", City = "Gdańsk", GMaps_Link = "https://www.google.com/maps/place/University+of+Gda%C5%84sk/@54.3961355,18.5721315,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd752f76dddae7:0x4d4128c9a5066e47!8m2!3d54.3961355!4d18.5743203" },
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Uniwersytet Gdański5", Description="UG.", Street = "Jana Bażyńskiego", Zip_Code = "80-309", City = "Gdańsk", GMaps_Link = "https://www.google.com/maps/place/University+of+Gda%C5%84sk/@54.3961355,18.5721315,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd752f76dddae7:0x4d4128c9a5066e47!8m2!3d54.3961355!4d18.5743203" },
-                new Item { Id = Guid.NewGuid().ToString(), Name = "Uniwersytet Gdański6", Description="UG.", Street = "Jana Bażyńskiego", Zip_Code = "80-309", City = "Gdańsk", GMaps_Link = "https://www.google.com/maps/place/University+of+Gda%C5%84sk/@54.3961355,18.5721315,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd752f76dddae7:0x4d4128c9a5066e47!8m2!3d54.3961355!4d18.5743203" },
-            };
-
-            foreach (var item in mockItems)
-            {
-                items.Add(item);
-            }
+                items = item as List<Item>;
+                MessagingCenter.Send(this, "Refresh");
+                await Task.CompletedTask;
+            });
         }
 
         public async Task<bool> AddItemAsync(Item item)
         {
             items.Add(item);
-
+            await SaveToFile();
             return await Task.FromResult(true);
         }
 
@@ -43,7 +38,7 @@ namespace UWP_UAapp.Services
             var _item = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(_item);
             items.Add(item);
-
+            await SaveToFile();
             return await Task.FromResult(true);
         }
 
@@ -51,7 +46,7 @@ namespace UWP_UAapp.Services
         {
             var _item = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
             items.Remove(_item);
-
+            await SaveToFile();
             return await Task.FromResult(true);
         }
 
@@ -63,6 +58,17 @@ namespace UWP_UAapp.Services
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
+        }
+        public async Task SaveToFile()
+        {
+            IFolder root = FileSystem.Current.LocalStorage;
+            IFolder folder = await root.CreateFolderAsync("UAappStorage", CreationCollisionOption.OpenIfExists);
+            string fileName = "places.txt";
+            IFile file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
+            List<Item> wizytowki = new List<Item>();
+            file = await folder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
+            string json = JsonConvert.SerializeObject(items);
+            await file.WriteAllTextAsync(json);
         }
     }
 }

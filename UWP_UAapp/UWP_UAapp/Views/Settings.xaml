@@ -14,8 +14,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Text="Dark Theme" Grid.Row="0" Grid.Column="0" Margin="25,0,0,0" XAlign="Center" YAlign="Start" TextColor ="{DynamicResource textColor}"/>
-        <Switch Grid.Row="0" Grid.Column="2" Margin="25,0,0,0" IsToggled="{Binding DarkMode}" VerticalOptions="Start" Toggled="ToggleDarkMode"/>
+        <Label Text="Dark Theme" Grid.Row="0" Grid.Column="0" Margin="5,15,0,0" XAlign="Center" YAlign="Start" TextColor ="{DynamicResource textColor}"/>
+        <Switch Grid.Row="0" Grid.Column="2" Margin="0,15,5,0" IsToggled="{Binding DarkMode}" VerticalOptions="Start" Toggled="ToggleDarkMode"/>
 
 
 

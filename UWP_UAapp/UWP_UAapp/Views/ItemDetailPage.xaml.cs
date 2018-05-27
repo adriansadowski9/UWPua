@@ -37,5 +37,28 @@ namespace UWP_UAapp.Views
             viewModel = new ItemDetailViewModel(item);
             BindingContext = viewModel;
         }
+
+        async void Delete_Clicked(object sender, EventArgs e)
+        {
+            var answer = await DisplayAlert("Delete", "Are you sure you want to delete this item?", "Yes", "No");
+            if (answer)
+            {
+                MessagingCenter.Send(this, "DeleteItem", viewModel.Item);
+                await Navigation.PopAsync();
+            }
+        }
+        async void Edit_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditItemPage(new EditViewModel(this.viewModel.Item)));
+        }
+
+        async void OpenGmaps(object sender, EventArgs args)
+        {
+            var answer = await DisplayAlert("Find this place", "Are you sure you want to show this place on Google Maps?", "Yes", "No");
+            if (answer)
+            {
+                Device.OpenUri(new Uri(viewModel.Item.GMaps_Link));
+            }
+        }
     }
 }

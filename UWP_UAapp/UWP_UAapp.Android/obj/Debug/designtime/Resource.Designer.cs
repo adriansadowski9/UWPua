@@ -24,11 +24,6 @@ namespace UWP_UAapp.Droid
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
-		public static void UpdateIdValues()
-		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::UWP_UAapp.Droid.Resource.Attribute.actionBarSize;
-		}
-		
 		public partial class Animation
 		{
 			
@@ -2201,6 +2196,9 @@ namespace UWP_UAapp.Droid
 			// aapt resource value: 2130837586
 			public static int abc_vector_test = 2130837586;
 			
+			// aapt resource value: 0
+			public static int about = 0;
+			
 			// aapt resource value: 2130837587
 			public static int avd_hide_password = 2130837587;
 			
@@ -2776,6 +2774,12 @@ namespace UWP_UAapp.Droid
 			
 			// aapt resource value: 2130837605
 			public static int notify_panel_notification_icon_bg = 2130837605;
+			
+			// aapt resource value: 0
+			public static int places = 0;
+			
+			// aapt resource value: 0
+			public static int settings = 0;
 			
 			// aapt resource value: 0
 			public static int xamarin_logo = 0;
@@ -3755,11 +3759,17 @@ namespace UWP_UAapp.Droid
 			// aapt resource value: 2131099681
 			public static int appbar_scrolling_view_behavior = 2131099681;
 			
+			// aapt resource value: 0
+			public static int ApplicationName = 0;
+			
 			// aapt resource value: 2131099682
 			public static int bottom_sheet_behavior = 2131099682;
 			
 			// aapt resource value: 2131099683
 			public static int character_counter_pattern = 2131099683;
+			
+			// aapt resource value: 0
+			public static int Hello = 0;
 			
 			// aapt resource value: 2131099667
 			public static int mr_button_content_description = 2131099667;

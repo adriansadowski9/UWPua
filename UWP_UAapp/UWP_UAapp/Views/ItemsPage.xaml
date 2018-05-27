@@ -16,6 +16,9 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
+            <SearchBar x:Name="searchcustomer"
+            Placeholder="Search"
+           TextChanged="SearchBar_TextChanged" TextColor="{DynamicResource textColor}" PlaceholderColor="{DynamicResource textColor}" CancelButtonColor="{DynamicResource textColor}"/>
             <ListView x:Name="ItemsListView" 
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
@@ -30,11 +33,11 @@
                         <ViewCell>
                             <StackLayout Padding="10">
                                 <Label Text="{Binding Name}" 
-                       LineBreakMode="NoWrap" XAlign="Center"
+                       XAlign="Center"
                        Style="{DynamicResource ListItemTextStyle}" 
                        FontSize="16" TextColor="{DynamicResource textColor}"/>
                                 <Label Text="{Binding Description}" 
-                       LineBreakMode="NoWrap" XAlign="Center"
+                       XAlign="Center"
                        Style="{DynamicResource ListItemDetailTextStyle}"
                        FontSize="13" TextColor="{DynamicResource textColor}"/>
                                 <Label Text="{Binding Street}" 
@@ -51,7 +54,6 @@
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                        FontSize="13" TextColor="{DynamicResource textColor}"/>
                                 </StackLayout>
-                                <Button Text="{Binding GMaps_Link}" BorderWidth="1" Clicked="OpenGmaps"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

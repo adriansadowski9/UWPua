@@ -4,16 +4,21 @@
              x:Class="UWP_UAapp.Views.ItemDetailPage"
              Title="{Binding Title}"
              BackgroundColor="{DynamicResource backgroundColor}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit" Clicked="Edit_Clicked" />
+        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" />
+    </ContentPage.ToolbarItems>
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Name:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
-        <Label Text="{Binding Item.Name}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
-        <Label Text="Description:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
-        <Label Text="{Binding Item.Description}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
-        <Label Text="Street:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
-        <Label Text="{Binding Item.Street}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
-        <Label Text="Zip code:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
-        <Label Text="{Binding Item.Zip_Code}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
-        <Label Text="City:" FontSize="Medium" TextColor="{DynamicResource textColor}"/>
-        <Label Text="{Binding Item.City}" FontSize="Small" TextColor="{DynamicResource textColor}"/>
+        <Label Text="Name:" FontSize="Medium" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.Name}" FontSize="Small" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="Description:" FontSize="Medium" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.Description}" FontSize="Small" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="Street:" FontSize="Medium" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.Street}" FontSize="Small" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="Zip code:" FontSize="Medium" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.Zip_Code}" FontSize="Small" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="City:" FontSize="Medium" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Label Text="{Binding Item.City}" FontSize="Small" XAlign="Center" TextColor="{DynamicResource textColor}"/>
+        <Button Text="Show on Google Maps" BorderWidth="1" Clicked="OpenGmaps"/>
     </StackLayout>
 </ContentPage>

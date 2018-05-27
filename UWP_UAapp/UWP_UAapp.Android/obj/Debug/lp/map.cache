@@ -1,4 +1,7 @@
 FormsViewGroup
+Newtonsoft.Json
+PCLStorage.Abstractions
+PCLStorage
 System.Runtime
 UWP_UAapp
 Xamarin.Android.Support.Animated.Vector.Drawable
@@ -22,3 +25,4 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 netstandard
+System.Resources.ResourceManager
