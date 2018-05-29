@@ -24,6 +24,13 @@ namespace UWP_UAapp.Droid
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
+		public static void UpdateIdValues()
+		{
+			global::PCLStorage.Resource.String.ApplicationName = global::UWP_UAapp.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::UWP_UAapp.Droid.Resource.String.Hello;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::UWP_UAapp.Droid.Resource.Attribute.actionBarSize;
+		}
+		
 		public partial class Animation
 		{
 			

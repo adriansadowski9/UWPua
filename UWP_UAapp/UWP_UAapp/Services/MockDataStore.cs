@@ -65,7 +65,7 @@ namespace UWP_UAapp.Services
             IFolder folder = await root.CreateFolderAsync("UAappStorage", CreationCollisionOption.OpenIfExists);
             string fileName = "places.txt";
             IFile file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
-            List<Item> wizytowki = new List<Item>();
+            List<Item> places = new List<Item>();
             file = await folder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
             string json = JsonConvert.SerializeObject(items);
             await file.WriteAllTextAsync(json);

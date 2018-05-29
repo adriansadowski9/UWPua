@@ -102,7 +102,6 @@ C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.Android\obj\Debug\res
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.Android\obj\Debug\res\drawable\places.png
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.Android\obj\Debug\res\drawable\settings.png
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.Android\bin\Debug\UWP_UAapp.Android.dll
-C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.Android\obj\Debug\linksrc\UWP_UAapp.pdb
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.Android\obj\Debug\linksrc\UWP_UAapp.Android.dll.mdb
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 C:\Users\Adrian\source\repos\UWP_UAapp\UWP_UAapp\UWP_UAapp.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
